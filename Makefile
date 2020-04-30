@@ -6,10 +6,10 @@ OS := $(shell uname)
 build: clean
 	rm -rf requirements.lock
 	helm version
-	helm init
+	helm init --client-only --stable-repo-url  https://mirror.azure.cn/kubernetes/charts/
 	helm repo add releases ${CHART_REPO}
-	helm repo add jenkins-x http://chartmuseum.jenkins-x.io
 	helm dependency build ${DIR}
+	helm package ${DIR}
 	helm lint ${DIR}
 
 install: 

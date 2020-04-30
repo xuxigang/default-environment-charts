@@ -12,3 +12,7 @@
 
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
+/.idea/default-environment-charts.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
